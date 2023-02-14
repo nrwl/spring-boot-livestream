@@ -5,21 +5,16 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "YzRmZjFkNmUtMmZhMS00MzgxLTg4NGQtMzk2Y2NhNzg2ZTJmfHJlYWQtd3JpdGU="
       }
     }
   },
   "targetDefaults": {
     "build": {
-      "dependsOn": [
-        "^build"
-      ]
+      "dependsOn": ["^build"]
     }
-  }
+  },
+  "plugins": ["@nxrocks/nx-spring-boot"],
+  "defaultProject": "todo-api"
 }
