@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@spring-boot-test/api-client": ["libs/api-client/src/index.ts"],
+      "@spring-boot-test/models": ["libs/models/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -13,8 +13,35 @@
   "targetDefaults": {
     "build": {
       "dependsOn": ["^build"]
+    },
+    "test": {
+      "inputs": ["default", "^default"]
+    },
+    "lint": {
+      "inputs": [
+        "default",
+        "{workspaceRoot}/.eslintrc.json",
+        "{workspaceRoot}/.eslintignore"
+      ]
     }
   },
   "plugins": ["@nxrocks/nx-spring-boot"],
-  "defaultProject": "todo-api"
+  "defaultProject": "todo-api",
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "style": "css",
+        "linter": "eslint",
+        "bundler": "vite",
+        "babel": true
+      },
+      "component": {
+        "style": "css"
+      },
+      "library": {
+        "style": "css",
+        "linter": "eslint"
+      }
+    }
+  }
 }
